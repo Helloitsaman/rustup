@@ -15,7 +15,11 @@ fn main() {
 
     let str=String::from("Hello");
     bs(str);
-    println!("{str}");
+
+    let kkj=String::from("Whatdup");
+
+    let u=whatup(kkj);
+    println!("{u}");
 
 }
 
@@ -26,6 +30,10 @@ fn jthu(x:i32){
 
 fn bs(y:String){
     println!("{y} World");
+}
+
+fn whatup(jjk:String)->String{
+    jjk
 }
 
 
