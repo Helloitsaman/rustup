@@ -33,10 +33,13 @@ fn main() {
     {
         let _kop=&mut nnn;
     }
-    let _pok=&mut nnn;
+    let pok=&mut nnn;
 
     //SLICE AND ITS TYPES
-    
+    let slice1=&pok[0..3];
+    let slice2=&pok[3..5];
+    println!("{slice1} and {slice2}");
+
 }
 
 fn jthu(x:i32){
