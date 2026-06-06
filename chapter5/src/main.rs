@@ -20,7 +20,12 @@ fn main() {
         ..user1
     };
 
+    let color1=color(0,0,0);
+    println!("{}",color1.0);
+
 }
+
+struct color(u32,u32,u32);
 
 struct User {
     name :String,
