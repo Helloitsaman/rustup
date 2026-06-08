@@ -38,10 +38,8 @@ fn main() {
     };
 
     println!("The struct method gives area {}", area222(&rect1));
-
     println!("{rect1:#?}");
-
-
+    dbg!(&rect1);
 }
 
 fn area222(rectangle:&Rectangle)->u32{
