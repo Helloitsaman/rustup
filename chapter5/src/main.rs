@@ -23,7 +23,17 @@ fn main() {
     let color1=color(0,0,0);
     println!("{}",color1.0);
 
+    let height=10;
+    let width=10;
+    let araara=area(height, width);
+    println!("The area is {araara}");
+
 }
+
+fn area(height:u32,width:u32)->u32{
+    width*height
+}
+
 
 struct color(u32,u32,u32);
 
