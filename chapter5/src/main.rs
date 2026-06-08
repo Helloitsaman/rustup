@@ -1,3 +1,4 @@
+
 fn main() {
     println!("Hello, world!");
 
@@ -28,6 +29,32 @@ fn main() {
     let araara=area(height, width);
     println!("The area is {araara}");
 
+    let tup111=(10,10);
+    println!("Area of rectangle is {}", area111(tup111));
+
+    let rect1 = Rectangle{
+        width:10,
+        height:20,
+    };
+
+    println!("The struct method gives area {}", area222(&rect1));
+
+    println!("{rect1:#?}");
+
+
+}
+
+fn area222(rectangle:&Rectangle)->u32{
+rectangle.width*rectangle.height
+}
+#[derive(Debug)]
+struct Rectangle{
+    width:u32,
+    height:u32,
+}
+
+fn area111(dimensions:(u32,u32))->u32{
+    dimensions.0*dimensions.1
 }
 
 fn area(height:u32,width:u32)->u32{
