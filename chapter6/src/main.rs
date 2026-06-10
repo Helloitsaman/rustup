@@ -16,6 +16,25 @@ fn main() {
     let m=Message::Write(String::from("Hello cuh"));
     m.call();
 
+    let pp=Coin::paise50;
+    println!("The value of 50 paise coin is {} paise", value_in_coin(pp));
+
+}
+
+enum Coin{
+    paise50,
+    rupee1,
+    rupee2,
+    rupee5,
+}
+
+fn value_in_coin(coin:Coin)->i8{
+    match coin{
+        Coin::paise50=>50,
+        Coin::rupee1=>1,
+        Coin::rupee2=>2,
+        Coin::rupee5=>5,
+    }
 }
 
 enum Option <T> {
