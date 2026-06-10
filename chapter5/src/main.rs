@@ -40,6 +40,24 @@ fn main() {
     println!("The struct method gives area {}", area222(&rect1));
     println!("{rect1:#?}");
     dbg!(&rect1);
+
+    let trnle=Triangle{
+        height:20,
+        breadth:30,
+    };
+
+    println!("The area of triangle is {}", trnle.aarea());
+}
+
+struct Triangle{
+height:u32,
+breadth:u32,
+}
+
+impl Triangle {
+    fn aarea(&self)->u32{
+self.height*self.breadth
+    }
 }
 
 fn area222(rectangle:&Rectangle)->u32{
