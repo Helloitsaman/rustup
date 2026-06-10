@@ -37,6 +37,16 @@ fn main() {
         height:20,
     };
 
+    let rect2 = Rectangle{
+        width:5,
+        height:15,
+    };
+
+    let rect3 = Rectangle{
+        width:50,
+        height:60,
+    };
+
     println!("The struct method gives area {}", area222(&rect1));
     println!("{rect1:#?}");
     dbg!(&rect1);
@@ -47,6 +57,30 @@ fn main() {
     };
 
     println!("The area of triangle is {}", trnle.aarea());
+
+    let sqr=Square{
+        side:-10
+    };
+if sqr.area333(){
+    println!("The square has a non zero side and it is {}", sqr.area333());
+}
+else{
+    println!("Square has a zero side");
+}
+
+println!("can rect1 hold rect2, {}", rect1.can_hold(&rect2));
+println!("can rect2 hold rect3, {}", rect2.can_hold(&rect3));
+
+}
+
+struct Square{
+    side:i32,
+}
+
+impl Square {
+    fn area333(&self)->bool{
+        self.side>0
+    }
 }
 
 struct Triangle{
@@ -67,6 +101,12 @@ rectangle.width*rectangle.height
 struct Rectangle{
     width:u32,
     height:u32,
+}
+
+impl Rectangle{
+    fn can_hold(&self, other:&Rectangle)->bool{
+        self.width>other.width && self.height>other.height
+    }
 }
 
 fn area111(dimensions:(u32,u32))->u32{
