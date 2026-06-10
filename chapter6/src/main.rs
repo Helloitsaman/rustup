@@ -16,15 +16,23 @@ fn main() {
     let m=Message::Write(String::from("Hello cuh"));
     m.call();
 
-    let pp=Coin::paise50;
+    let state=useState::mumbai;
+
+    let pp=Coin::rupee2(state);
     println!("The value of 50 paise coin is {} paise", value_in_coin(pp));
 
+}
+
+#[derive(Debug)]
+enum useState{
+    mumbai,
+    delhi,
 }
 
 enum Coin{
     paise50,
     rupee1,
-    rupee2,
+    rupee2(useState),
     rupee5,
 }
 
@@ -32,7 +40,10 @@ fn value_in_coin(coin:Coin)->i8{
     match coin{
         Coin::paise50=>50,
         Coin::rupee1=>1,
-        Coin::rupee2=>2,
+        Coin::rupee2(state)=>{
+            println!("The state it is from is {state:?}");
+            2
+        },
         Coin::rupee5=>5,
     }
 }
