@@ -1,3 +1,4 @@
+use std::*;
 fn main() {
     println!("Hello, world!");
     let ip4=addrrkind::V4;
@@ -15,6 +16,11 @@ fn main() {
     let m=Message::Write(String::from("Hello cuh"));
     m.call();
 
+}
+
+enum Option <T> {
+    None,
+    Some(T),
 }
 
 enum Message{
