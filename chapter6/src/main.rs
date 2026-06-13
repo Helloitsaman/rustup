@@ -21,6 +21,9 @@ fn main() {
     let pp=Coin::rupee2(state);
     println!("The value of 50 paise coin is {} paise", value_in_coin(pp));
 
+    let p=String::from("Hello world cusin");
+    println!("{p}");
+
 }
 
 #[derive(Debug)]
