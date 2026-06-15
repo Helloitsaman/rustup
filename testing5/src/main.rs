@@ -2,6 +2,7 @@ use std::io;
 use std::cmp::Ordering;
 fn main() {
     println!("Hello, world!");
+    println!("This code consists of guessing game hardcoded as well as a calci");
     let r1=Rectangle{
         length:20,
         width:20,
