@@ -3,6 +3,7 @@ use std::cmp::Ordering;
 fn main() {
     println!("Hello, world!");
     println!("This code consists of guessing game hardcoded as well as a calci");
+    println!("This was made without ai");
     let r1=Rectangle{
         length:20,
         width:20,
