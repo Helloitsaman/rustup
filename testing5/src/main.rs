@@ -4,6 +4,7 @@ fn main() {
     println!("Hello, world!");
     println!("This code consists of guessing game hardcoded as well as a calci");
     println!("This was made without ai");
+    println!("Yurrrrrr");
     let r1=Rectangle{
         length:20,
         width:20,
