@@ -1,7 +1,7 @@
 use std::io;
 use std::cmp::Ordering;
 fn main() {
-    println!("This code consists of guessing game hardcoded as well as a calci");
+    println!("This code consists of guessing game hardcoded as well as my own rustup calci");
     println!("This was made without ai on my momma and everything i love cuh");
     let r1=Rectangle{
         length:20,
